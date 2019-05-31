@@ -1,41 +1,53 @@
 {
+
   "env": {
+
     "browser": true,
+
     "node": true,
+
     "commonjs": true,
+
     "jest": true,
-    "es7": true
+
+    "es6": true
+
   },
+
   "globals": {
+
     "err": true,
+
     "req": true,
+
     "res": true,
+
     "next": true
+
   },
+
   "extends": "eslint:recommended",
+
   "parserOptions": {
-    "sourceType": "module"
+
+    "sourceType": "module",
+    "ecmaVersion": 2017
+
   },
+
   "rules": {
+
     "no-console": "off",
-    "indent": [
-      "error",
-      2
-    ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
-    "comma-dangle": [
-      "error",
-      "always-multiline"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
+
+    "indent": ["error", 2],
+
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+
+    "comma-dangle": ["error", "always-multiline"],
+
+    "semi": ["error", "always"]
+
   }
+
 }
+
