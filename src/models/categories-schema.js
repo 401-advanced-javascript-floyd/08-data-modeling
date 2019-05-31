@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const categoriesSchema = mongoose.Schema({
   name: { type: String, required: true },
   display_name: {type: String, required: false},
-  description: {type: String, required: false}
+  description: {type: String, required: false},
 });
 
 // If Mongoose already has a people, don't register a new one

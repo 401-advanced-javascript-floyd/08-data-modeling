@@ -1,10 +1,10 @@
 'use strict';
 //products
 // _id, category, name, display_name, description
-const uuid = require('uuid/v4');
+// const uuid = require('uuid/v4');
 
-const schema = {
-};
+// const schema = {
+// };
 
 class Products {
 
@@ -12,20 +12,20 @@ class Products {
     this.database = [];
   }
 
-  get(id) {
-  }
-  
-  post(entry) {
-  }
+  // get(id) {
+  // }
 
-  put(id, entry) {
-  }
+  // post(entry) {
+  // }
 
-  delete(id) {
-  }
+  // put(id, entry) {
+  // }
 
-  sanitize(entry) {
-  }
+  // delete(id) {
+  // }
+
+  // sanitize(entry) {
+  // }
 
 }
 

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --verbose --forceExit",
     "test-watch": "jest --watchAll --verbose",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "flint": "eslint . --fix"
   },
   "jest": {
     "testEnvironment": "node"

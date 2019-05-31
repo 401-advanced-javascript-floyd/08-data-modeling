@@ -1,6 +1,6 @@
 
 'use strict';
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 //const server = require('./src/app.js');
 
 const mongoConnect = require('../util/mongoose-connect');
@@ -13,17 +13,17 @@ const Categories = require('../src/models/categories');
 const categories = new Categories();
 
 describe('can post data', () => {
-  beforeAll(()=>{
+  beforeAll(() => {
     return mongoConnect(MONGODB_URI);
-  })
+  });
   it('post new info to db', async () => {
     var result = await categories.post({
-      name: "Powel-Perelta",
-      description: "Best skateboard company ever"
+      name: 'Powel-Perelta',
+      description: 'Best skateboard company ever',
     });
-    console.log('*********', result)
+    console.log('*********', result);
     expect(result).toBeDefined();
-    expect(result.name).toBe("Powel-Perelta");
+    expect(result.name).toBe('Powel-Perelta');
 
   });
 });

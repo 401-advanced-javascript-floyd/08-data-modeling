@@ -5,8 +5,8 @@ class Categories {
   constructor() {
   }
 
-  get(_id) {
-  }
+  // get(_id) {
+  // }
 
   post(record) {
     var mongoCategories = new Category(record);
@@ -14,11 +14,11 @@ class Categories {
 
   }
 
-  put(_id, record) {
-  }
+  // put(_id, record) {
+  // }
 
-  delete(_id) {
-  }
+  // delete(_id) {
+  // }
 
 }
 
