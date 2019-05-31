@@ -10,7 +10,6 @@ class Categories {
 
   post(record) {
     var mongoCategories = new Category(record);
-    console.log('hitting post')
     return mongoCategories.save(); // include validation
 
   }

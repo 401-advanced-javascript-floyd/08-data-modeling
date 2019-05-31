@@ -1,19 +1,5 @@
 'use strict';
 
-// require('dotenv').config();
-// const mongoose = require('mongoose');
-
-// const mongooseOptions = {
-//   useNewUrlParser:true,
-//   useCreateIndex: true,
-// };
-// // mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
-// mongoose.connect(process.env.MONGODB_URI, mongooseOptions, function(error) {
-//   // Check error in initial connection. There is no 2nd param to the callback.
-//   console.log('mongoose has connected to database');
-// });
-// require('./src/app.js').start(process.env.PORT);
-/////////////
 
 
 const mongoose = require('mongoose');
