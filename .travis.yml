@@ -1,11 +1,12 @@
 anguage: node_js
 node_js:
   - "9"
-
+before_script:
+  - npm install
 script:
   - npm run lint
   - npm run test 
-  services:
-    -mongodb
-  env:
+services:
+  - mongodb
+env:
   - MONGODB_URI=mongodb://localhost/401d3-people  
