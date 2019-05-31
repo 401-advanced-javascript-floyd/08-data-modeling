@@ -8,4 +8,4 @@ script:
   services:
     -mongodb
   env:
-  -MONGODB_URI=mongodb://localhost/401d3-people  
+  - MONGODB_URI=mongodb://localhost/401d3-people  
