@@ -11,8 +11,7 @@
     "req": true,
     "res": true,
     "next": true
-  },commit -m 'travis'
-  git 
+  },
   "extends": "eslint:recommended",
   "parserOptions": {
     "sourceType": "module",
