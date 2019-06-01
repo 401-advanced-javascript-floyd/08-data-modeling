@@ -19,7 +19,7 @@ class Categories {
   }
 
   put(_id, record) {
-    Category.updateOne(_id, record, (err, item) => {
+    Category.updateOne(_id, record, () => {
     });
     return Category.findById(_id, (err, item) => {
       return item.name;

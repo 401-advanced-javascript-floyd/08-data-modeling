@@ -25,7 +25,6 @@ describe('work with categories', () => {
     });
   
     newId = result._id;
-    newName = result.name;
     expect(result._id).toBeDefined();
 
   });
