@@ -12,7 +12,6 @@ const Categories = require('../src/models/categories');
 
 const categories = new Categories();
 var newId;
-var newName;
 describe('work with categories', () => {
   beforeAll(() => {
     return mongoConnect(MONGODB_URI);
@@ -23,20 +22,20 @@ describe('work with categories', () => {
       'name': 'Datetree D',
       'description': '#1  web dev company ever',
     });
-  
+
     newId = result._id;
     expect(result._id).toBeDefined();
 
   });
   it('get new info from db', async () => {
-    let result2 = await categories.getbyId( {_id:newId });
+    let result2 = await categories.getbyId({ _id: newId });
     // console.log(result2);
     expect(result2.name).toEqual('Datetree D');
     // expect(result.name).toBe('Datetree Guy');
 
   });
   it('update item', async () => {
-    let result = await categories.put({_id:newId}, {name: 'Mr updated'});
+    let result = await categories.put({ _id: newId }, { name: 'Mr updated' });
     console.log(result);
 
     // console.log(result2);
@@ -44,10 +43,7 @@ describe('work with categories', () => {
     // expect(result.name).toBe('Datetree Guy');
   });
   it('delete item', async () => {
-    let result = await categories.delete({_id:newId});
-    console.log('l49',result.name);
-
-    //expect(result.deletedCount).toBe(1);
-    // expect(result.name).toBe('Datetree Guy');
+    let result = await categories.delete({ _id: newId });
+    console.log('l49', result.name);
   });
 });
