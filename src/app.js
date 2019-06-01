@@ -47,7 +47,7 @@ app.use(errorHandler);
 // ROUTE HANDLER FUNCTIONS
 function getCategories(request,response,next) {
   // expects an array of object to be returned from the model
-  categories.get()
+  categories.getbyId()
     .then( data => {
       const output = {
         count: data.length,
@@ -60,7 +60,7 @@ function getCategories(request,response,next) {
 
 function getCategory(request,response,next) {
   // expects an array with the one matching record from the model
-  categories.get(request.params.id)
+  categories.getbyId('l63',request.params.id)
     .then( result => response.status(200).json(result[0]) )
     .catch( next );
 }
