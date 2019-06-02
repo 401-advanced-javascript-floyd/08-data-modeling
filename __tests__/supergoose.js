@@ -28,7 +28,7 @@ supergoose.startDB = async () => {
   
   const mongooseOptions = {
     useNewUrlParser:true,
-    useCreateIndex: true
+    useCreateIndex: true,
   };
   
   await mongoose.connect(mongoUri, mongooseOptions, (err) => {
@@ -46,7 +46,7 @@ supergoose.stopDB = () => {
 
 // Just so that it can live in the tests folder
 describe('supergoose', () => {
-  it('is super', () => {
+  it.skip('is super', () => {
     expect(true).toBeTruthy();
   });
 });

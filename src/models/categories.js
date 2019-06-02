@@ -5,21 +5,32 @@ class Categories {
   constructor() {
   }
 
-  get(_id) {
-  }
+  getbyId(_id) {
+    return Category.findById(_id, (err, item) => {
+      return item.name;
+    });
 
+  }
   post(record) {
     var mongoCategories = new Category(record);
-    console.log('hitting post')
     return mongoCategories.save(); // include validation
 
   }
 
   put(_id, record) {
+    Category.updateOne(_id, record, () => {
+    });
+    return Category.findById(_id, (err, item) => {
+      return item.name;
+    });
+
+  }
+  delete(_id) {
+    return Category.deleteOne(_id, (err, item) => {
+      return item.deletedCount;
+    });
   }
 
-  delete(_id) {
-  }
 
 }
 

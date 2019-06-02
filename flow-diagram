@@ -1,0 +1,14 @@
+//Endpoints
+app.get('/categories', getCategories);
+app.post('/categories', postCategories);
+app.get('/categories/:id', getCategory);
+app.put('/categories/:id', putCategories);
+app.delete('/categories/:id', deleteCategories);
+app.get('/products', getProducts);
+app.post('/products', postProducts);
+app.get('/products/:id', getProduct);
+app.put('/products/:id', putProducts);
+app.delete('/products/:id', deleteProducts);
+
+//each endpoint calls a function that handles the associated actions
+

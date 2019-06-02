@@ -1,31 +1,37 @@
+//instructions did not say test both so I tested categories
 'use strict';
-//products
-// _id, category, name, display_name, description
-const uuid = require('uuid/v4');
-
-const schema = {
-};
-
+const Product = require('./product-schema');
 class Products {
 
   constructor() {
-    this.database = [];
   }
 
-  get(id) {
+  getbyId(_id) {
+    return Product.findById(_id, (err, item) => {
+      return item.name;
+    });
+
   }
-  
-  post(entry) {
+  post(record) {
+    var productCategories = new Product(record);
+    return  productCategories.save(); // include validation
+
   }
 
-  put(id, entry) {
+  put(_id, record) {
+    Product.updateOne(_id, record, () => {
+    });
+    return Product.findById(_id, (err, item) => {
+      return item.name;
+    });
+
+  }
+  delete(_id) {
+    return Product.deleteOne(_id, (err, item) => {
+      return item.deletedCount;
+    });
   }
 
-  delete(id) {
-  }
-
-  sanitize(entry) {
-  }
 
 }
 
