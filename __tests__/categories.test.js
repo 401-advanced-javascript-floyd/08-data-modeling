@@ -29,9 +29,7 @@ describe('work with categories', () => {
   });
   it('get new info from db', async () => {
     let result2 = await categories.getbyId({ _id: newId });
-    // console.log(result2);
     expect(result2.name).toEqual('Datetree D');
-    // expect(result.name).toBe('Datetree Guy');
 
   });
   it('update item', async () => {
